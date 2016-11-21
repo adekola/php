@@ -1,20 +1,19 @@
 <?php 
 
-$greeting = "Hello world";
+
+$person = [
+	'age' => 25 ,
+	'hair' => 'Black',
+	'career' => 'Products Guy'
+];
 
 
-$names = [
-	'Motun',
-	'Kola',
-	'Aderayoola',
-	'Adesewa'
-]; //empty array
+$person['name'] =  'Adekola';
 
-/*
-foreach ($names as $name) {
-	# code...
-	echo $name.', ';
-}
-*/
+unset($person['age']);
+echo '<pre>';
+//die(var_dump($person)); // dumps the value for any and everything; die() makes the execution end on this very line
+var_dump($person);
+echo '</pre>';
 
 require 'index.view.php';
