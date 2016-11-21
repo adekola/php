@@ -1,26 +1,9 @@
 <?php 
 
-$task = [
+require 'functions.php';
 
-	'title' => 'Buy Proposal Ring',
-	'due' => 'Next Month',
-	'assigned_to' => 'Me',
-	'completed' => false
-];
+$animals = ['dog', 'cat'];
 
-
-echo '<pre>';
-var_dump($task);
-echo '</pre>';
+dd($animals);
 
 require 'index.view.php';
-
-
-
-/*
-<?php foreach ($task as $heading => $value) : ?> 
-	<li> 
-		<strong> <?= ucwords($heading) ?> </strong>  <?= $value; ?>
-	</li>
-<?php endforeach; ?> -->
-*/
