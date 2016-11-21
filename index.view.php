@@ -15,10 +15,21 @@
 <body>
 
 <ul>
+<li>
+		<strong> Name:  </strong> <?= $task['title'] ?>
+</li>
 
-<?php foreach ($person as $feature => $value) : ?> 
-	<li> <strong> <?= $feature ?> </strong> <?= $value; ?> </li>
-<?php endforeach; ?>
+<li>
+		<strong> Due:  </strong> <?= $task['due'] ?>
+</li>
+
+<li>
+		<strong> Person Responsible:  </strong> <?= $task['assigned_to'] ?>
+</li>
+
+<li>
+		<strong> Status:  </strong> <?= $task['completed'] ? 'Complete' : 'Incomplete'; ?>
+</li>
 
 </ul>
 
