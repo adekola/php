@@ -13,36 +13,17 @@
 	</style>
 </head>
 <body>
-
 <ul>
-<li>
-		<strong> Name:  </strong> <?= $task['title'] ?>
-</li>
-
-<li>
-		<strong> Due:  </strong> <?= $task['due'] ?>
-</li>
-
-<li>
-		<strong> Person Responsible:  </strong> <?= $task['assigned_to'] ?>
-</li>
-
-<li>
-		<strong> Status:  </strong> 
-
-		
-		<?php if ($task['completed']) : ?>
-
-			<span class="icon">&#9989;</span>
-
-		<?php else : ?>
-
-			<span class="icon">Incomplete</span>
-
-		<?php endif ?>
-</li>
+	<?php foreach ($tasks as $task) : ?>
+		<li>
+		<?php if ($task->completed) :?>
+			<strike> <?= $task->description ; ?> </strike>
+		<?php else: ?>
+			<?= $task->description ; ?>
+		<?php endif; ?>
+		</li>
+	<?php endforeach; ?>
 
 </ul>
-
 </body>
 </html>
