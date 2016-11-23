@@ -1,45 +1,18 @@
-<?php 
+<?php
 
-declare(strict_types=1); // to ensure a strict enforcing of types in methods
-
-// type hinting for scalar types
-
-function setAge(int $age)
-{
-	var_dump($age);
-
-}
-
-function setIsValid(bool $valid)
-{
-	var_dump($valid);
-}
+require 'vendor/autoload.php';
 
 
-class User{}
+// before PHP7 : could not import everything in the same namespace at once
 
-function getUser() : User//type hinting of return values
-{
-	return new User;
-}
+use App\Person;
+
+use App\Animal;
 
 
-interface SomeInterface {
+// with PHP7 : 
 
-	public function getUser() : User; // return value type hinting used in interfaces
-	
-}
+use App\{Person, Animal};
 
-class SomeClass implements SomeInterface {
-
-	public function getUser() : User
-	{
-		return new User;
-	}
-
-}
-//setAge('30');
-
-//setIsValid(1);
-
-getUser();
+var_dump(new Person);
+var_dump(new Animal);
