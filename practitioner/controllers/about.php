@@ -1,0 +1,3 @@
+<?
+
+require 'views/about.php';

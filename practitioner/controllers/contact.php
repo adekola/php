@@ -1,0 +1,3 @@
+<?
+
+require 'views/contact.php';
